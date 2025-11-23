@@ -1,17 +1,6 @@
-import csv
+from db.load_csv import load_csv
+from db.queries import *
 
-import mysql.connector
-
-cnx = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="classicmodels"
-)
-print("connected, server version:", cnx.get_server_info())
-cursor = cnx.cursor()
-cursor.execute("select * from offices")
-data = cursor.fetchall()
-for i in data:
-    print(i)
-
+load_csv()
+# search_by_institution_name("המים")
+# search_by_course_name("הצלה")
