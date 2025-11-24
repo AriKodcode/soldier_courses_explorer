@@ -47,3 +47,5 @@ def db_app():
         if choose == 10:
             print("Exit")
             break
+        else:
+            print("Press num between 1 and 10")
