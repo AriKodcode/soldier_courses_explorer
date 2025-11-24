@@ -2,8 +2,8 @@ import csv
 from db.connection import make_connection
 
 
-def load_csv():
-    cnx = make_connection()
+def load_csv(conn):
+    cnx = conn
     cursor = cnx.cursor()
 
     with open("C:/Users/internet/Desktop/soldier_courses_explorer/data/courses.csv", encoding="utf-8") as f:
